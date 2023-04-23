@@ -152,6 +152,52 @@ function displayBoard() {
 	
 }
 
+function hideCommonImmunities() {
+	
+	params = new URLSearchParams(window.location.search);
+	
+	excludeList = params.get("exclude").split(",");
+	
+	
+	for (i = 0; i < excludeList.length; i++) {
+	
+		document.getElementById(excludeList[i]).parentElement.style.display = "none";
+	
+	}
+	
+}
+
+function squareShow(num, id) {
+	
+	var Connect = new XMLHttpRequest();
+	Connect.open("GET", "squares.xml", false);
+	Connect.setRequestHeader("Content-Type", "text/xml");
+	Connect.send(null);
+
+	var response = Connect.responseXML;
+	var squares = response.childNodes[0];
+	
+	sqTitle = firstToString(squares.children[id], "title");
+	sqText = firstToString(squares.children[id], "text");
+	sqTags = squares.children[id].getElementsByTagName("tag");
+	
+	immuneTable = document.getElementsByName("immuneTable");
+	excludeList = "";
+	for (i = 0; i < immuneTable.length; i++) {
+		if (immuneTable[i].checked) {
+			if (excludeList == "") { excludeList = immuneTable[i].value; }
+			else { excludeList = immuneTable[i].value + "," + excludeList; }
+		}
+	}
+	
+	sqImmune = "";
+	
+	if (isAnyTagInList(sqTags, excludeList)) { sqImmune = "<br><i>Vos immunités vous protègent contre les effets de cette case.</i>"; }
+	
+	document.getElementById("squareDesc").innerHTML = "<b>" + num + " : " + sqTitle + "</b><br><br>" + sqText + "<br>" + sqImmune;
+	
+}
+
 function isAnyTagInList(tags, list) {
 	
 	if (list == ""){
@@ -209,36 +255,5 @@ function unitToString(unit, num){
 		break;
 		
 	}
-	
-}
-
-function squareShow(num, id) {
-	
-	var Connect = new XMLHttpRequest();
-	Connect.open("GET", "squares.xml", false);
-	Connect.setRequestHeader("Content-Type", "text/xml");
-	Connect.send(null);
-
-	var response = Connect.responseXML;
-	var squares = response.childNodes[0];
-	
-	sqTitle = firstToString(squares.children[id], "title");
-	sqText = firstToString(squares.children[id], "text");
-	sqTags = squares.children[id].getElementsByTagName("tag");
-	
-	immuneTable = document.getElementsByName("immuneTable");
-	excludeList = "";
-	for (i = 0; i < immuneTable.length; i++) {
-		if (immuneTable[i].checked) {
-			if (excludeList == "") { excludeList = immuneTable[i].value; }
-			else { excludeList = immuneTable[i].value + "," + excludeList; }
-		}
-	}
-	
-	sqImmune = "";
-	
-	if (isAnyTagInList(sqTags, excludeList)) { sqImmune = "<br><i>Vos immunités vous protègent contre les effets de cette case.</i>"; }
-	
-	document.getElementById("squareDesc").innerHTML = "<b>" + num + " : " + sqTitle + "</b><br><br>" + sqText + "<br>" + sqImmune;
 	
 }
