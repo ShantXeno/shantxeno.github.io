@@ -50,7 +50,7 @@
   <square>
 	<num>6</num>
     <title>Fougue amoureuse</title>
-	<text><br/>Le village où vous faites étape a reçu la visite de Mia, la Fée des Amours, et sa magie flotte encore dans les airs. À peine un regard échangé, et vous voilà pris·e de désir pour la personne qui croise votre chemin...<br/> <span class="effPlayer">Embrassez fougueusement un·e joueur·se de votre choix.</span> Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">vous n'avancerez au prochain tour que du chiffre indiqué par le plus petit dé</span>.</text>
+	<text>Le village où vous faites étape a reçu la visite de Mia, la Fée des Amours, et sa magie flotte encore dans les airs. À peine un regard échangé, et vous voilà pris·e de désir pour la personne qui croise votre chemin...<br/> <span class="effPlayer">Embrassez fougueusement un·e joueur·se de votre choix.</span> Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">vous n'avancerez au prochain tour que du chiffre indiqué par le plus petit dé</span>.</text>
 	<tags>
 		<tag>romance</tag>
 	</tags>
@@ -59,7 +59,7 @@
   <square>
 	<num>7</num>
     <title>Passage secret</title>
-	<text><br/>En tâtonnant un mur de pierre, vous découvrez soudain un passage secret. <span class="effGame">Avancez de dix cases, et appliquez les effets de la case d'arrivée.</span></text>
+	<text>En tâtonnant un mur de pierre, vous découvrez soudain un passage secret. <span class="effGame">Avancez de dix cases, et appliquez les effets de la case d'arrivée </span>.<br/>Si vous ne pouvez pas avancer de dix cases, <span class="effGame">restez sur celle-ci</span>.</text>
 	<tags>
 		<tag></tag>
 	</tags>
