@@ -7,7 +7,7 @@
     <title>Faemanji</title>
 	<script type="text/javascript" src="board.js"></script>
 </head>
-<body style="text-align:justify; text-align-last: center;">
+<body style="text-align:justify; text-align-last: center;" onload="displayDomain(); displayBoard();">
 	
 	<table style="width:80%; margin-left:auto; margin-right:auto; border:double;">
 		<tr>
@@ -48,6 +48,9 @@
 					<fieldset style="text-align:left">
 						<legend><b>Vos immunités</b></legend>
 						<span class="checkList"><input type="checkbox" id="sizechange" name="immuneTable" value="sizechange">Changement de taille</input></span>
+						<span class="checkList"><input type="checkbox" id="death" name="immuneTable" value="death">Mort</input></span>
+						<span class="checkList"><input type="checkbox" id="vore" name="immuneTable" value="vore">Prédation</input></span>
+						<span class="checkList"><input type="checkbox" id="romance" name="immuneTable" value="romance">Romance</input></span>
 					</fieldset>
 					
 					<br><br>
@@ -59,6 +62,13 @@
 	
 	<br/><br/>
 	
+	<div style="width:80%; margin-left:auto; margin-right:auto; border:double; "><div style="margin:20px;" id="squareDesc"><i>Choisissez une case pour découvrir ce qu'elle recèle.</i></div></div>
+	
+	<br/><br/>
+	
+	<table><tr id="gameBoard"></tr></table>
+	
+	<br/><br/>
 	
 </body>
 </html>

@@ -50,7 +50,13 @@ function generateBoardUrl() {
 		faeNum = Math.floor(Math.random() * (domains.children.length));
 	}
 	
-	boardURL += "&domain=" + firstToString(domains.children[faeNum], "num"); 	
+	boardURL += "&domain=" + firstToString(domains.children[faeNum], "num"); 
+	
+	// Get random reward
+	rwdNum = Math.floor(Math.random() * (domains.children.length));
+	numRewards = domains.children[faeNum].getElementsByTagName("reward").length;
+	
+	boardURL += "&reward=" + Math.floor(Math.random() * numRewards); 
 	
 	// Get number of squares
 	numSquares = parseInt(document.getElementById("squaresNum").value);
@@ -78,6 +84,71 @@ function generateBoardUrl() {
 	
 	// Display link
 	document.getElementById("boardLink").innerHTML = "<a href='" + boardURL + "'>FAEMANJI !</a>";
+	
+}
+
+function displayDomain() {
+
+	var Connect = new XMLHttpRequest();
+	Connect.open("GET", "domains.xml", false);
+	Connect.setRequestHeader("Content-Type", "text/xml");
+	Connect.send(null);
+
+	var response = Connect.responseXML;
+	var domains = response.childNodes[0];
+	
+	params = new URLSearchParams(window.location.search);
+	
+	faeId = parseInt(params.get("domain"), 16) - 1;
+	rwdNum = parseInt(params.get("reward"));
+	faeAll = domains.children[faeId];
+	
+	document.getElementById("faeName").innerHTML = "Domaine de " + firstToString(faeAll, "name");
+	document.getElementById("faeText").innerHTML = firstToString(faeAll, "text");
+	document.getElementById("faeDouble").innerHTML = "<b>Quiconque obtient un double avec les dés</b> " + firstToString(faeAll, "double");
+	document.getElementById("faeSeven").innerHTML = "<b>Quiconque obtient un sept avec les dés</b> " + firstToString(faeAll, "seven");
+	
+	document.getElementById("faeReward").innerHTML = "<b>Quiconque sur la dernière case s'exclame \"Faemanji\"</b> " + faeAll.getElementsByTagName("reward")[rwdNum].innerHTML.toString();
+	
+	timeN = parseInt(params.get("timeN"));
+	timeU = params.get("timeU");
+	
+	if (timeU == "inf") {
+		document.getElementById("faeTime").innerHTML = "<i>Tout effet subi subsistera de façon permanente après la fin de la partie.</i>";
+	} else if (timeN == "0") {
+		document.getElementById("faeTime").innerHTML = "<i>Tout effet subi se dissipera immédiatement après la fin de la partie.</i>";
+	} else {
+		document.getElementById("faeTime").innerHTML = "<i>Tout effet subi subsistera pendant une durée de " + timeN + " " + unitToString(timeU, timeN) + " après la fin de la partie.</i>";
+	}
+	
+	
+}
+
+function displayBoard() {
+	
+	var Connect = new XMLHttpRequest();
+	Connect.open("GET", "squares.xml", false);
+	Connect.setRequestHeader("Content-Type", "text/xml");
+	Connect.send(null);
+
+	var response = Connect.responseXML;
+	var squares = response.childNodes[0];
+	
+	params = new URLSearchParams(window.location.search);
+	
+	squareList = params.get("squares").split(",");
+	
+	document.getElementById("gameBoard").innerHTML += '<td style="height:80px; width:80px; border:solid 1px; display: inline-block; text-align:center; padding:2px;"><h2>' + "D" + '</h2></td>';
+	
+	for (i = 0; i < squareList.length; i++) {
+		
+		sqNum = parseInt(squareList[i], 16) - 1;
+		
+		document.getElementById("gameBoard").innerHTML += '<td style="height:80px; width:80px; border:solid 1px; display: inline-block; text-align:center; padding:2px;" onclick="squareShow(' + (i+1) + "," + sqNum + ')"><h2>' + (i+1) + '</h2></td>';
+		
+	}
+	
+	document.getElementById("gameBoard").innerHTML += '<td style="height:80px; width:80px; border:solid 1px; display: inline-block; text-align:center; padding:2px;"><h2>' + "A" + '</h2></td>';
 	
 }
 
@@ -114,6 +185,60 @@ function setInfiniteTime() {
 
 function firstToString(element, tag){
 	
-	return element.getElementsByTagName(tag)[0].textContent.toString();
+	return element.getElementsByTagName(tag)[0].innerHTML.toString();
+	
+}
+
+function unitToString(unit, num){
+	
+	plur = "s";
+	if (num == 1) { plur = ""; }
+	
+	switch (unit) {
+	
+	case "h":
+		return "heure" + plur;
+		break;
+	
+	case "j":
+		return "jour" + plur;
+		break;
+	
+	case "sem":
+		return "semaine" + plur;
+		break;
+		
+	}
+	
+}
+
+function squareShow(num, id) {
+	
+	var Connect = new XMLHttpRequest();
+	Connect.open("GET", "squares.xml", false);
+	Connect.setRequestHeader("Content-Type", "text/xml");
+	Connect.send(null);
+
+	var response = Connect.responseXML;
+	var squares = response.childNodes[0];
+	
+	sqTitle = firstToString(squares.children[id], "title");
+	sqText = firstToString(squares.children[id], "text");
+	sqTags = squares.children[id].getElementsByTagName("tag");
+	
+	immuneTable = document.getElementsByName("immuneTable");
+	excludeList = "";
+	for (i = 0; i < immuneTable.length; i++) {
+		if (immuneTable[i].checked) {
+			if (excludeList == "") { excludeList = immuneTable[i].value; }
+			else { excludeList = immuneTable[i].value + "," + excludeList; }
+		}
+	}
+	
+	sqImmune = "";
+	
+	if (isAnyTagInList(sqTags, excludeList)) { sqImmune = "<br><i>Vos immunités vous protègent contre les effets de cette case.</i>"; }
+	
+	document.getElementById("squareDesc").innerHTML = "<b>" + num + " : " + sqTitle + "</b><br><br>" + sqText + "<br>" + sqImmune;
 	
 }

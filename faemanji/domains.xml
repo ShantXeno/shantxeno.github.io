@@ -3,15 +3,34 @@
 
   <domain>
 	<num>1</num>
-    <name>Làthai, Féé Sans-Visage</name>
+    <name>Làthai, Fée Sans-Visage</name>
 	<text>Nul ne saurait deviner les émotions que ressent Làthai, et pour cause, celle-ci ne possède ni bouche par laquelle s'exprimer, ni yeux par lesquels regarder. Son domaine, à l'image de sa maîtresse, ne laisse rien transparaître qui permette d'en définir la nature : des plaines sans herbe à perte de vue, aux couleurs uniformes, où ne résonne aucun son ni ne souffle aucun vent. Vous n'y trouverez rien d'autre que ce que d'autres fées y auront laissé...</text>
 	<effects>
-		<double>avance d'un nombre de cases égal à la somme des deux dés.</double>
-		<seven>avance d'un total de sept cases.</seven>
+		<double><span class="effGame">avance d'un nombre de cases égal à la somme des deux dés</span>.</double>
+		<seven><span class="effGame">avance d'un total de sept cases</span>.</seven>
 	</effects>
-	<reward>remportera la victoire et mettra fin à la partie.</reward>
+	<rewards>
+		<reward>remportera la victoire et <span class="effGame">mettra fin à la partie</span>.</reward>
+	</rewards>
 	<tags>
 		<tag></tag>
+	</tags>
+  </domain> 
+ 
+  <domain>
+	<num>2</num>
+    <name>Daoime, Fée des Gemmes</name>
+	<text>Lorsque le soleil illumine les montagnes rocheuses du domaine de Daoime, les innombrables pierres précieuses incrustées à même la pierre brillent d'un tel éclat que les voyageurs peinent à retrouver leur chemin. Même la végétation qui peuple les rares plaines et collines est faite de diamant et de cristal. Pour cette raison, mieux vaut pour se déplacer emprunter les tunnels des nombreuses mines qui parcourent le domaine.</text>
+	<effects>
+		<double>perd son chemin dans les tunnels, et <span class="effGame">n'avance que du nombre de cases indiqué par un seul dé</span>.</double>
+		<seven>trouve une gemme ensorcelée, et <span class="effPlayer">rétrécit de sept fois la taille de son talisman</span> si l'un des dés indique 1 ou 2, ou <span class="effPlayer">grandit de sept fois la taille de son talisman</span> sinon.</seven>
+	</effects>
+	<rewards>
+		<reward>se verra accorder <span class="effPlayer">le pouvoir d'enfermer la cible de son choix dans un cristal</span>, autant de fois qu'il a de non-immunités.</reward>
+		<reward>recevra <span class="effPlayer">autant de pierres précieuses qu'il a de non-immunités</span>.</reward>
+	</rewards>
+	<tags>
+		<tag>sizechange</tag>
 	</tags>
   </domain> 
  

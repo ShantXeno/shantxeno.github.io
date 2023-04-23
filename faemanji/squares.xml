@@ -10,4 +10,59 @@
 	</tags>
   </square> 
  
+  <square>
+	<num>2</num>
+    <title>Sort de croissance</title>
+	<text>Un sort de croissance vous permettra d'emprunter une taille plus imposante. Lancez les dés, puis <span class="effPlayer">grandissez de la taille de votre talisman multipliée par le résultat</span>.</text>
+	<tags>
+		<tag>sizechange</tag>
+	</tags>
+  </square> 
+  
+  <square>
+	<num>3</num>
+    <title>Sort de rétrécissement</title>
+	<text>Un sort de rétrécissement vous aidera à adopter une taille plus discrète. Lancez les dés, puis <span class="effPlayer">rétrécissez de la taille de votre talisman multipliée par le résultat</span>.</text>
+	<tags>
+		<tag>sizechange</tag>
+	</tags>
+  </square> 
+ 
+  <square>
+	<num>4</num>
+    <title>Sort de mutisme</title>
+	<text>Sàmha, la Fée du Silence, a décidé de vous jouer un tour ; <span class="effPlayer">vous voici désormais devenu muet</span>.<br/>Si vous atteignez la dernière case du plateau, <span class="effPlayer">vous retrouverez la parole</span> après avoir <span class="effGame">passé un tour</span>.</text>
+	<tags>
+		<tag></tag>
+	</tags>
+  </square> 
+  
+  <square>
+	<num>5</num>
+    <title>Famine</title>
+	<text>Après des jours de marche, la faim devient insoutenable, mais vous êtes à court de provisions... Il ne vous reste plus qu'une option.<br/> <span class="effPlayer">Dévorez un·e joueur·se de votre choix.</span> La victime <span class="effPlayer">réapparaîtra à sa place initiale</span> après avoir <span class="effGame">passé un tour</span>. Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">passez deux tours</span>.</text>
+	<tags>
+		<tag>vore</tag>
+		<tag>death</tag>
+	</tags>
+  </square> 
+   
+  <square>
+	<num>6</num>
+    <title>Fougue amoureuse</title>
+	<text><br/>Le village où vous faites étape a reçu la visite de Mia, la Fée des Amours, et sa magie flotte encore dans les airs. À peine un regard échangé, et vous voilà pris·e de désir pour la personne qui croise votre chemin...<br/> <span class="effPlayer">Embrassez fougueusement un·e joueur·se de votre choix.</span> Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">vous n'avancerez au prochain tour que du chiffre indiqué par le plus petit dé</span>.</text>
+	<tags>
+		<tag>romance</tag>
+	</tags>
+  </square> 
+    
+  <square>
+	<num>7</num>
+    <title>Passage secret</title>
+	<text><br/>En tâtonnant un mur de pierre, vous découvrez soudain un passage secret. <span class="effGame">Avancez de dix cases, et appliquez les effets de la case d'arrivée.</span></text>
+	<tags>
+		<tag></tag>
+	</tags>
+  </square> 
+ 
 </squares>
