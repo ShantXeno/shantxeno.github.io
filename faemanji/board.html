@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<link rel="stylesheet" href="style.css" />
+    <title>Faemanji</title>
+	<script type="text/javascript" src="board.js"></script>
+</head>
+<body style="text-align:justify; text-align-last: center;">
+	
+	<table style="width:80%; margin-left:auto; margin-right:auto; border:double;">
+		<tr>
+			<td>
+				<div style="margin-left:20px; margin-right:20px;">
+					<h1><div id="faeName">Domaine de Larram, Fée des Biens et des Maux</div></h1>
+					<div id="faeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div><br>
+					<div id="faeDouble"><b>Quiconque obtient un double avec les dés</b> avance du nombre de cases indiqué.</div><br> 
+					<div id="faeSeven"><b>Quiconque obtient un sept avec les dés</b> avance du nombre de cases indiqué.</div><br> 
+					<div id="faeReward"><b>Quiconque sur la dernière case s'exclame "Faemanji"</b> sera récompensé.</div><br> 
+					<div id="faeTime"><i>Tout effet subi subsistera pendant une durée de 24 heures après la fin de la partie.</i></div><br> 
+				<div>
+			</td>
+		</tr>
+	</table>
+	
+	<br><br>
+	
+	<table style="width:80%; margin-left:auto; margin-right:auto; border:double;">
+		<tr>
+			<td>
+			
+				<br><br>
+				
+				<div style="margin-left:20px; margin-right:20px;">
+				
+					<label for="sizeRef"><b>Votre talisman :</b></label>
+					<input type="number" id="sizeRef" name="sizeRef" min="0" style="width:50px">
+					<select name="sizeUnit" id="sizeUnit" value="cm">
+						<option value="mm">millimètres</option>
+						<option value="cm">centimètres</option>
+						<option value="m">mètres</option>
+						<option value="km">kilomètres</option>
+					</select>
+					
+					<br><br>
+					
+					<fieldset style="text-align:left">
+						<legend><b>Vos immunités</b></legend>
+						<span class="checkList"><input type="checkbox" id="sizechange" name="immuneTable" value="sizechange">Changement de taille</input></span>
+					</fieldset>
+					
+					<br><br>
+					
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	<br/><br/>
+	
+	
+</body>
+</html>

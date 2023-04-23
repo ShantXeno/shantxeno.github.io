@@ -1,0 +1,30 @@
+
+body
+{
+    background-color: #222;
+    color: white;
+}
+
+.checkList
+{
+	display: inline-block;
+	min-width: 18%;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.effGame
+{
+	color: hotpink;
+}
+
+.effPlayer
+{
+	color: cyan;
+}
+
+/*#dexGame, #pullGame 
+{
+	-webkit-text-stroke: 3px #FFF;
+	paint-order: stroke fill;
+}*/

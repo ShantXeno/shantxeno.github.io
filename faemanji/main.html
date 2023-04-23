@@ -1,13 +1,70 @@
  <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
 	<meta http-equiv="Cache-Control" content="no-cache" />
 	<link rel="stylesheet" href="style.css" />
     <title>Faemanji</title>
-	<script type="text/javascript" src="faemanji.js"></script>
-  </head>
-  <body>
-  
-  </body>
+	<script type="text/javascript" src="board.js"></script>
+</head>
+<body style="text-align:justify; text-align-last: center;">
+	
+	<table style="width:80%; margin-left:auto; margin-right:auto; border:double;">
+		<tr>
+			<td>
+				<div style="margin-left:20px; margin-right:20px;">
+					
+					<h1>Faemanji</h1>
+					
+					Peu de gens ont déjà eu la chance de rencontrer une fée. Moins nombreux encore sont les personnes qui ont visité l'un de leurs domaines.<br><br>
+					
+					Lorsque le plateau du Faemanji vous sera dévoilé, votre rôle deviendra celui d'un·e explorateur·ice de l'un de ces domaines. Soyez avertis : les fées aiment se rendre visite, et leurs domaines sont sans cesse changeants ; de fait, les étapes qui parsèmeront votre route ne seront jamais les mêmes d'une partie à l'autre. Une seule constante demeure : <b>la partie ne prendra fin qu'à l'unique condition que l'un·e des joueur·ses atteigne la dernière case, et s'écrie "FAEMANJI !"</b>.<br><br>
+					
+					Chaque case sur laquelle vous vous arrêterez pourra affecter <span class="effGame">le déroulement du jeu</span> ou <span class="effPlayer">les joueurs eux-mêmes</span>. Pour vous assister, vous disposerez de deux pièces d'équipement. Votre <b>talisman</b> affectera certain des effets que vous subirez selon sa taille (si vous débutez, une taille cent fois plus petite que la votre est recommandée). Votre <b>parchemin d'immunité</b>, quant à lui, vous protégera de certains effets, mais chaque immunité diminuera également la valeur de votre récompense finale...<br><br>
+					
+					Tôt ou tard, la partie prendra fin, mais tout ne sera pas terminé pour autant. De fait, les fées sont des farceuses notoires, et <b>chaque effet ayant affecté les joueurs au cours de la partie perdurera après celle-ci.</b> Cependant, elles ne sont pas non plus ingrates ; ainsi, la fée du domaine que vous visiterez réserve également une récompense à qui remportera la partie...<br><br>
+					
+					Avant toute chose, prenez le temps de remplir un premier parchemin d'immunité commun à tous les joueurs, qui déterminera quelles cases <b>n'apparaîtront pas</b> sur le plateau. Indiquez-y également le nombre de cases désiré, et la durée durant laquelle les effets perdureront après la fin de la partie. Alors seulement, ouvrez le plateau, et découvrez ce qu'il vous réserve...<br><br>
+					
+					<fieldset>
+						<legend><b>Immunités collectives</b></legend>
+						<span class="checkList"><input type="checkbox" id="sizechange" name="immuneTable" value="sizechange">Changement de taille</input></span>
+					</fieldset>
+					
+					<br><br>
+					
+					<fieldset>
+						<legend><b>Durée de l'aventure :</b></legend>
+							<label for="squaresNum"><b>Nombre d'étapes :</b></label>
+							<input type="number" id="squaresNum" name="squaresNum" min="50" value="50" style="width:50px" required>
+							<br/><br/>
+							<label for="timeNum"><b>Durée des effets :</b></label>
+							<input type="number" id="timeNum" name="timeNum" min="0" value="0" style="width:50px">
+							<select name="timeUnit" id="timeUnit" onchange="setInfiniteTime()">
+								<option value="h">heures</option>
+								<option value="j">jours</option>
+								<option value="sem">semaines</option>
+								<option value="inf">permanents</option>
+							</select>
+					</fieldset>
+					
+					<br>
+					
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<br/>
+
+	<button onclick="generateBoardUrl()" style="font-size:large">DÉCOUVRIR LE PLATEAU</button> 
+
+	<br/><br/>
+	
+	<h1><div id="boardLink"></div></h1>
+	
+	<br/><br/>
+	
+	
+</body>
 </html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domains>
+
+  <domain>
+	<num>1</num>
+    <name>Làthai, Féé Sans-Visage</name>
+	<text>Nul ne saurait deviner les émotions que ressent Làthai, et pour cause, celle-ci ne possède ni bouche par laquelle s'exprimer, ni yeux par lesquels regarder. Son domaine, à l'image de sa maîtresse, ne laisse rien transparaître qui permette d'en définir la nature : des plaines sans herbe à perte de vue, aux couleurs uniformes, où ne résonne aucun son ni ne souffle aucun vent. Vous n'y trouverez rien d'autre que ce que d'autres fées y auront laissé...</text>
+	<effects>
+		<double>avance d'un nombre de cases égal à la somme des deux dés.</double>
+		<seven>avance d'un total de sept cases.</seven>
+	</effects>
+	<reward>remportera la victoire et mettra fin à la partie.</reward>
+	<tags>
+		<tag></tag>
+	</tags>
+  </domain> 
+ 
+</domains>
