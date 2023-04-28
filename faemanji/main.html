@@ -7,12 +7,14 @@
     <title>Faemanji</title>
 	<script type="text/javascript" src="board.js"></script>
 </head>
-<body style="text-align:justify; text-align-last: center;">
+<body>
 	
 	<table style="width:80%; margin-left:auto; margin-right:auto; border:double;">
 		<tr>
 			<td>
 				<div style="margin-left:20px; margin-right:20px;">
+					
+					<div class ="center-just">
 					
 					<h1>Faemanji</h1>
 					
@@ -26,17 +28,25 @@
 					
 					Avant toute chose, prenez le temps de remplir un premier parchemin d'immunité commun à tous les joueurs, qui déterminera quelles cases <b>n'apparaîtront pas</b> sur le plateau. Indiquez-y également le nombre de cases désiré, et la durée durant laquelle les effets perdureront après la fin de la partie. Alors seulement, ouvrez le plateau, et découvrez ce qu'il vous réserve...<br><br>
 					
+					</div>
+					
 					<fieldset>
 						<legend><b>Immunités collectives</b></legend>
+						<span class="checkList"><input type="checkbox" id="genderswap" name="immuneTable" value="genderswap">Changement de sexe</input></span>
 						<span class="checkList"><input type="checkbox" id="sizechange" name="immuneTable" value="sizechange">Changement de taille</input></span>
+						<span class="checkList"><input type="checkbox" id="buttgrowth" name="immuneTable" value="buttgrowth">Croissance fessière</input></span>
+						<span class="checkList"><input type="checkbox" id="breastgrowth" name="immuneTable" value="breastgrowth">Croissance mammaire</input></span>
+						<span class="checkList"><input type="checkbox" id="cockgrowth" name="immuneTable" value="cockgrowth">Croissance pénienne</input></span>
+						<span class="checkList"><input type="checkbox" id="monster" name="immuneTable" value="monster">Hybridation</input></span>
 						<span class="checkList"><input type="checkbox" id="death" name="immuneTable" value="death">Mort</input></span>
 						<span class="checkList"><input type="checkbox" id="vore" name="immuneTable" value="vore">Prédation</input></span>
 						<span class="checkList"><input type="checkbox" id="romance" name="immuneTable" value="romance">Romance</input></span>
+						<span class="checkList"><input type="checkbox" id="sizetheft" name="immuneTable" value="sizetheft">Vol de taille</input></span>
 					</fieldset>
 					
 					<br><br>
 					
-					<fieldset>
+					<fieldset class ="center-just">
 						<legend><b>Durée de l'aventure :</b></legend>
 							<label for="squaresNum"><b>Nombre d'étapes :</b></label>
 							<input type="number" id="squaresNum" name="squaresNum" min="50" value="50" style="width:50px" required>
@@ -51,7 +61,11 @@
 							</select>
 					</fieldset>
 					
-					<br>
+					<br><br>
+					
+					<div class ="center-just"><input type="checkbox" id="getReward" name="rewardBox" value="getReward">Récompenser le gagnant</input></div>
+					
+					<br><br>
 					
 				</div>
 			</td>
@@ -60,11 +74,11 @@
 
 	<br/>
 
-	<button onclick="generateBoardUrl()" style="font-size:large">DÉCOUVRIR LE PLATEAU</button> 
+	<div class ="center-just"><button onclick="generateBoardUrl()" style="font-size:large">DÉCOUVRIR LE PLATEAU</button> </div>
 
-	<br/><br/>
+	<br/>
 	
-	<h1><div id="boardLink"></div></h1>
+	<h1 class ="center-just"><div id="boardLink"></div></h1>
 	
 	<br/><br/>
 	

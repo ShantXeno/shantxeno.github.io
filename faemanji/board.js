@@ -53,10 +53,18 @@ function generateBoardUrl() {
 	boardURL += "&domain=" + firstToString(domains.children[faeNum], "num"); 
 	
 	// Get random reward
+	if (document.getElementById("getReward").checked) {
+		
 	rwdNum = Math.floor(Math.random() * (domains.children.length));
 	numRewards = domains.children[faeNum].getElementsByTagName("reward").length;
 	
 	boardURL += "&reward=" + Math.floor(Math.random() * numRewards); 
+	
+	} else {
+		
+	boardURL += "&reward=X";
+		
+	}
 	
 	// Get number of squares
 	numSquares = parseInt(document.getElementById("squaresNum").value);
@@ -100,7 +108,7 @@ function displayDomain() {
 	params = new URLSearchParams(window.location.search);
 	
 	faeId = parseInt(params.get("domain"), 16) - 1;
-	rwdNum = parseInt(params.get("reward"));
+	rwdNum = params.get("reward");
 	faeAll = domains.children[faeId];
 	
 	document.getElementById("faeName").innerHTML = "Domaine de " + firstToString(faeAll, "name");
@@ -108,7 +116,15 @@ function displayDomain() {
 	document.getElementById("faeDouble").innerHTML = "<b>Quiconque obtient un double avec les dés</b> " + firstToString(faeAll, "double");
 	document.getElementById("faeSeven").innerHTML = "<b>Quiconque obtient un sept avec les dés</b> " + firstToString(faeAll, "seven");
 	
-	document.getElementById("faeReward").innerHTML = "<b>Quiconque sur la dernière case s'exclame \"Faemanji\"</b> " + faeAll.getElementsByTagName("reward")[rwdNum].innerHTML.toString();
+	if (rwdNum != "X") {
+		rwdNum = parseInt(rwdNum);
+		rwdSelected = faeAll.getElementsByTagName("reward")[rwdNum];
+		document.getElementById("faeReward").innerHTML = "<b>Quiconque sur la dernière case s'exclame \"Faemanji\"</b> " + rwdSelected.innerHTML.toString() + "<br><br>";
+		displayRwdCount(rwdSelected.getAttribute("cost"), rwdSelected.getAttribute("unit"));
+		document.getElementById("immuneField").setAttribute("onchange", "displayRwdCount('" + rwdSelected.getAttribute("cost") + "','" + rwdSelected.getAttribute("unit") + "')");
+	} else {
+		document.getElementById("faeReward").remove();
+	}
 	
 	timeN = parseInt(params.get("timeN"));
 	timeU = params.get("timeU");
@@ -120,7 +136,6 @@ function displayDomain() {
 	} else {
 		document.getElementById("faeTime").innerHTML = "<i>Tout effet subi subsistera pendant une durée de " + timeN + " " + unitToString(timeU, timeN) + " après la fin de la partie.</i>";
 	}
-	
 	
 }
 
@@ -256,4 +271,29 @@ function unitToString(unit, num){
 		
 	}
 	
+}
+
+function displayRwdCount(cost, unit){
+	
+	if (cost != "0") {
+		
+		immuneTable = document.getElementsByName("immuneTable");
+		immuneCount = 0;
+	
+		for (i = 0; i < immuneTable.length; i++) {
+			if (!immuneTable[i].checked) {
+				immuneCount++;
+			}
+		}
+		
+		rwdCount = Math.floor(immuneCount / parseFloat(cost));
+	
+		document.getElementById("rwdCount").innerHTML = "<i>Récompense en cas de victoire : " + rwdCount + " " + unit + "</i><br><br>";
+	
+	}
+	
+}
+
+function replaceMult(match, p1, shift, str) {
+  return parseFloat(p1) * 10 + "cm";
 }

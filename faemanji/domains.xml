@@ -10,7 +10,7 @@
 		<seven><span class="effGame">avance d'un total de sept cases</span>.</seven>
 	</effects>
 	<rewards>
-		<reward>remportera la victoire et <span class="effGame">mettra fin à la partie</span>.</reward>
+		<reward cost="0">remportera la victoire et <span class="effGame">mettra fin à la partie</span>.</reward>
 	</rewards>
 	<tags>
 		<tag></tag>
@@ -23,11 +23,11 @@
 	<text>Lorsque le soleil illumine les montagnes rocheuses du domaine de Daoime, les innombrables pierres précieuses incrustées à même la pierre brillent d'un tel éclat que les voyageurs peinent à retrouver leur chemin. Même la végétation qui peuple les rares plaines et collines est faite de diamant et de cristal. Pour cette raison, mieux vaut pour se déplacer emprunter les tunnels des nombreuses mines qui parcourent le domaine.</text>
 	<effects>
 		<double>perd son chemin dans les tunnels, et <span class="effGame">n'avance que du nombre de cases indiqué par un seul dé</span>.</double>
-		<seven>trouve une gemme ensorcelée, et <span class="effPlayer">rétrécit de sept fois la taille de son talisman</span> si l'un des dés indique 1 ou 2, ou <span class="effPlayer">grandit de sept fois la taille de son talisman</span> sinon.</seven>
+		<seven>trouve une gemme ensorcelée, et selon le résultat des dés : <br/><b>● 1+6 ou 2+5 : </b><span class="effPlayer">rétrécit de sept fois la taille de son talisman</span> <br/><b>● 3+4 : </b><span class="effPlayer">grandit de sept fois la taille de son talisman</span>.</seven>
 	</effects>
 	<rewards>
-		<reward>se verra accorder <span class="effPlayer">le pouvoir d'enfermer la cible de son choix dans un cristal</span>, autant de fois qu'il a de non-immunités.</reward>
-		<reward>recevra <span class="effPlayer">autant de pierres précieuses qu'il a de non-immunités</span>.</reward>
+		<reward cost="3" unit="utilisations">se verra accorder <span class="effPlayer">le pouvoir d'enfermer la cible de son choix dans un cristal</span>, un nombre de fois limité.</reward>
+		<reward cost="1" unit="gemmes">recevra <span class="effPlayer">un certain nombre de pierres précieuses</span>.</reward>
 	</rewards>
 	<tags>
 		<tag>sizechange</tag>

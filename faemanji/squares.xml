@@ -31,7 +31,7 @@
   <square>
 	<num>4</num>
     <title>Sort de mutisme</title>
-	<text>Sàmha, la Fée du Silence, a décidé de vous jouer un tour ; <span class="effPlayer">vous voici désormais devenu muet</span>.<br/>Si vous atteignez la dernière case du plateau, <span class="effPlayer">vous retrouverez la parole</span> après avoir <span class="effGame">passé un tour</span>.</text>
+	<text>Sàmha, la Fée du Silence, a décidé de vous jouer un tour ; <span class="effPlayer">vous voici désormais devenu muet</span>.<br/><br/>Si vous atteignez la dernière case du plateau, <span class="effPlayer">vous retrouverez la parole</span> après avoir <span class="effGame">passé un tour</span>.</text>
 	<tags>
 		<tag></tag>
 	</tags>
@@ -40,7 +40,7 @@
   <square>
 	<num>5</num>
     <title>Famine</title>
-	<text>Après des jours de marche, la faim devient insoutenable, mais vous êtes à court de provisions... Il ne vous reste plus qu'une option.<br/> <span class="effPlayer">Dévorez un·e joueur·se de votre choix.</span> La victime <span class="effPlayer">réapparaîtra à sa place initiale</span> après avoir <span class="effGame">passé un tour</span>. Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">passez deux tours</span>.</text>
+	<text>Après des jours de marche, la faim devient insoutenable, mais vous êtes à court de provisions... Il ne vous reste plus qu'une option.<br/><br/> <span class="effPlayer">Dévorez un·e joueur·se de votre choix.</span> La victime <span class="effPlayer">réapparaîtra à sa place initiale</span> après avoir <span class="effGame">passé un tour</span>. Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">passez deux tours</span>.</text>
 	<tags>
 		<tag>vore</tag>
 		<tag>death</tag>
@@ -50,7 +50,7 @@
   <square>
 	<num>6</num>
     <title>Fougue amoureuse</title>
-	<text>Le village où vous faites étape a reçu la visite de Mia, la Fée des Amours, et sa magie flotte encore dans les airs. À peine un regard échangé, et vous voilà pris·e de désir pour la personne qui croise votre chemin...<br/> <span class="effPlayer">Embrassez fougueusement un·e joueur·se de votre choix.</span> Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">vous n'avancerez au prochain tour que du chiffre indiqué par le plus petit dé</span>.</text>
+	<text>Le village où vous faites étape a reçu la visite de Mia, la Fée des Amours, et sa magie flotte encore dans les airs. À peine un regard échangé, et vous voilà pris·e de désir pour la personne qui croise votre chemin...<br/><br/> <span class="effPlayer">Embrassez fougueusement un·e joueur·se de votre choix.</span> Si vous ne le voulez ou ne le pouvez pas, <span class="effGame">vous n'avancerez au prochain tour que du chiffre indiqué par le plus petit dé</span>.</text>
 	<tags>
 		<tag>romance</tag>
 	</tags>
@@ -59,9 +59,33 @@
   <square>
 	<num>7</num>
     <title>Passage secret</title>
-	<text>En tâtonnant un mur de pierre, vous découvrez soudain un passage secret. <span class="effGame">Avancez de dix cases, et appliquez les effets de la case d'arrivée </span>.<br/>Si vous ne pouvez pas avancer de dix cases, <span class="effGame">restez sur celle-ci</span>.</text>
+	<text>En tâtonnant un mur de pierre, vous découvrez soudain un passage secret. <span class="effGame">Avancez de dix cases, et appliquez les effets de la case d'arrivée</span>.<br/>Si vous ne pouvez pas avancer de dix cases, <span class="effGame">restez ici</span>.</text>
 	<tags>
 		<tag></tag>
+	</tags>
+  </square> 
+ 
+  <square>
+	<num>8</num>
+    <title>Kleptomanie métrique</title>
+	<text>Que vous le désiriez ou non, Mèirleach, la Fée des Voleurs, vous a fait un don. Lors de votre prochain tour, <span class="effPlayer">vous déroberez à chaque joueur·se que vous dépasserez une taille égale à cinq fois celle de leur talisman</span>.<br/><br/> Si vous ne dépassez personne, Mèirleach se vexera et <span class="effPlayer">vous ôtera cinq fois la taille de votre talisman</span>.</text>
+	<tags>
+		<tag>sizechange</tag>
+		<tag>sizetheft</tag>
+	</tags>
+  </square> 
+  
+  <square>
+	<num>9</num>
+    <title>Contrat avec la Mère-Succube</title>
+	<text>Est-il bien sage d'accepter de signer le contrat d'une démone ? En tout cas, celle assise à votre table est parvenue à vous convaincre...<br/><br/> <span class="effGame">Lancez un dé.</span>, et selon le résultat : <br/> <b>● Pair :</b> <span class="effPlayer">Vous voici devenu·e une succube, aux atouts féminins plantureux.</span> <br/> <b>● Impair :</b> <span class="effPlayer">Vous voici devenu·e un incube, aux atouts masculins imposants.</span> <br/><br/> En plus <span class="effPlayer">d'attributs physiques démoniaques</span> (cornes, queue, ailes, etc.), vous voilà également capable de <span class="effPlayer">séduire n'importe qui d'un baiser</span>...</text>
+	<tags>
+		<tag>sizechange</tag>
+		<tag>genderswap</tag>
+		<tag>monster</tag>
+		<tag>breastgrowth</tag>
+		<tag>buttgrowth</tag>
+		<tag>cockgrowth</tag>
 	</tags>
   </square> 
  

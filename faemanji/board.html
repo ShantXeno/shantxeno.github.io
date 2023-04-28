@@ -7,9 +7,9 @@
     <title>Faemanji</title>
 	<script type="text/javascript" src="board.js"></script>
 </head>
-<body style="text-align:justify; text-align-last: center;" onload="displayDomain(); displayBoard(); hideCommonImmunities();">
+<body onload="displayDomain(); displayBoard(); hideCommonImmunities();">
 	
-	<table style="width:80%; margin-left:auto; margin-right:auto; border:double;">
+	<table class ="center-just" style="width:80%; margin-left:auto; margin-right:auto; border:double;">
 		<tr>
 			<td>
 				<div style="margin-left:20px; margin-right:20px;">
@@ -17,7 +17,7 @@
 					<div id="faeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div><br>
 					<div id="faeDouble"><b>Quiconque obtient un double avec les dés</b> avance du nombre de cases indiqué.</div><br> 
 					<div id="faeSeven"><b>Quiconque obtient un sept avec les dés</b> avance du nombre de cases indiqué.</div><br> 
-					<div id="faeReward"><b>Quiconque sur la dernière case s'exclame "Faemanji"</b> sera récompensé.</div><br> 
+					<div id="faeReward"><b>Quiconque sur la dernière case s'exclame "Faemanji"</b> sera récompensé.<br></div>
 					<div id="faeTime"><i>Tout effet subi subsistera pendant une durée de 24 heures après la fin de la partie.</i></div><br> 
 				<div>
 			</td>
@@ -33,6 +33,8 @@
 				<br><br>
 				
 				<div style="margin-left:20px; margin-right:20px;">
+					
+					<div class ="center-just">
 				
 					<label for="sizeRef"><b>Votre talisman :</b></label>
 					<input type="number" id="sizeRef" name="sizeRef" min="0" style="width:50px">
@@ -43,17 +45,27 @@
 						<option value="km">kilomètres</option>
 					</select>
 					
-					<br><br>
+					</div>
 					
-					<fieldset style="text-align:left">
+					<br>
+					
+					<fieldset id="immuneField" style="text-align:left">
 						<legend><b>Vos immunités</b></legend>
+						<span class="checkList"><input type="checkbox" id="genderswap" name="immuneTable" value="genderswap">Changement de sexe</input></span>
 						<span class="checkList"><input type="checkbox" id="sizechange" name="immuneTable" value="sizechange">Changement de taille</input></span>
+						<span class="checkList"><input type="checkbox" id="buttgrowth" name="immuneTable" value="buttgrowth">Croissance fessière</input></span>
+						<span class="checkList"><input type="checkbox" id="breastgrowth" name="immuneTable" value="breastgrowth">Croissance mammaire</input></span>
+						<span class="checkList"><input type="checkbox" id="cockgrowth" name="immuneTable" value="cockgrowth">Croissance pénienne</input></span>
+						<span class="checkList"><input type="checkbox" id="monster" name="immuneTable" value="monster">Hybridation</input></span>
 						<span class="checkList"><input type="checkbox" id="death" name="immuneTable" value="death">Mort</input></span>
 						<span class="checkList"><input type="checkbox" id="vore" name="immuneTable" value="vore">Prédation</input></span>
 						<span class="checkList"><input type="checkbox" id="romance" name="immuneTable" value="romance">Romance</input></span>
+						<span class="checkList"><input type="checkbox" id="sizetheft" name="immuneTable" value="sizetheft">Vol de taille</input></span>
 					</fieldset>
 					
-					<br><br>
+					<br>
+					
+					<div class ="center-just" id="rwdCount"></input></div>
 					
 				</div>
 			</td>
@@ -62,7 +74,7 @@
 	
 	<br/><br/>
 	
-	<div style="width:80%; margin-left:auto; margin-right:auto; border:double; "><div style="margin:20px;" id="squareDesc"><i>Choisissez une case pour découvrir ce qu'elle recèle.</i></div></div>
+	<div class ="center-just" style="width:80%; margin-left:auto; margin-right:auto; border:double; "><div style="margin:20px;" id="squareDesc"><i>Choisissez une case pour découvrir ce qu'elle recèle.</i></div></div>
 	
 	<br/><br/>
 	
