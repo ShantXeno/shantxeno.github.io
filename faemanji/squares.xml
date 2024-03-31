@@ -88,5 +88,89 @@
 		<tag>cockgrowth</tag>
 	</tags>
   </square> 
+   
+  <square>
+	<num>a</num>
+    <title>Foudroiement</title>
+	<text>L'orage se déchaîne avec une violence inouïe. Autour de vous, la foudre s'abat avec fracas sur les arbres et les habitations. <br/><br/>Si votre taille est la plus élevée de tous·tes les joueur·ses, <span class="effPlayer">vous brûlez vif</span>. Vous <span class="effPlayer">réapparaîtrez à votre place initiale</span> après avoir <span class="effGame">passé un tour</span>.</text>
+	<tags>
+		<tag>death</tag>
+		<tag>gore</tag>
+	</tags>
+  </square> 
+    
+  <square>
+	<num>b</num>
+    <title>Éboulement</title>
+	<text>Un craquement sourd se fait entendre provenant de la paroi rocheuse bordant la route ; soudainement, de lourdes pierres commencent à s'abattre au sol, menaçant de vous écraser. <br/><br/>Si votre taille est la moins élevée de tous·tes les joueur·ses, <span class="effPlayer">vous êtes broyé·e sur place</span>. Vous <span class="effPlayer">réapparaîtrez à votre place initiale</span> après avoir <span class="effGame">passé un tour</span>.</text>
+	<tags>
+		<tag>death</tag>
+		<tag>gore</tag>
+	</tags>
+  </square> 
+   
+  <square>
+	<num>c</num>
+    <title>Lait d'Holstaure</title>
+	<text>Faisant étape dans la taverne d'un village de fermiers, vous vous laissez tenter par une boisson aux arômes lactés. La serveuse vous prévient : c'est un rafraîchissement très particulier. <br/><br/>Si vous possédez des seins, chacun de vos prochain lancers de dés <span class="effPlayer">leur fera gagner un nombre de bonnets équivalent au résultat du lancer</span>. Cet effet <span class="effPlayer">prendra fin</span> dès le tour suivant un résultat impair.</text>
+	<tags>
+		<tag>breastgrowth</tag>
+	</tags>
+  </square> 
+    
+  <square>
+	<num>d</num>
+    <title>En avance au banquet</title>
+	<text>Premier arrivé, premier servi ; une table couverte de victuailles se dresse devant vous, et vous comptez bien en profiter avant que d'autres convives ne vous rejoignent. Pour chaque joueur situé derrière vous sur le plateau, <span class="effPlayer">votre poids double</span>.</text>
+	<tags>
+		<tag>weightgain</tag>
+	</tags>
+  </square> 
+ 
+  <square>
+	<num>e</num>
+    <title>Serviette à temps partiel</title>
+	<text>Vous voilà sans le sou... Pas le choix ; il va vous falloir accepter le premier emploi que l'on vous proposera, aussi peu conventionnel soit-il. <br/><br/><span class="effPlayer">Votre taille devient celle du talisman de la première personne à s'exclamer "Fae"</span>, et <span class="effPlayer">vous devrez rester sous leur aisselle jusqu'à votre prochain tour.</span> Si personne ne se prononce, relancez les dés, et <span class="effGame">reculez du nombre de cases obtenu, sans appliquer les effets de la case d'arrivée</span>.</text>
+	<tags>
+		<tag>armpit</tag>
+		<tag>sweat</tag>
+		<tag>sizechange</tag>
+	</tags>
+  </square> 
+     
+  <square>
+	<num>f</num>
+    <title>Chaudron d'investissement</title>
+	<text>Chez les farfadets de Thoradh, la Fée du Commerce, tout s'échange, tout se marchande, tout a un cours ; un investissement de bonne fortune pourra vous rapporter gros... <br/><br/>À chaque fois qu'un·e autre joueur·se grandit ou rétrécit, <span class="effPlayer">vous grandissez ou rétrécissez également de la taille de leur talisman</span>. Cet effet <span class="effPlayer">prendra fin</span> si les dés affichent chacun 1 ; <span class="effPlayer">votre taille deviendra alors celle de votre talisman</span>.</text>
+	<tags>
+		<tag>sizechange</tag>
+	</tags>
+  </square> 
+
+  <square>
+	<num>10</num>
+    <title>Secret de la tisserande</title>
+	<text>Une servante de l'Auberge de la Tisserande vous révèle le secret qui lui permet d'être si efficace... <span class="effPlayer">Vous voilà maintenant doté·e d'une paire de bras supplémentaire.</span></text>
+	<tags>
+		<tag>sizechange</tag>
+		<tag>extralimbs</tag>
+	</tags>
+  </square>
+
+  <square>
+	<num>11</num>
+    <title>Salutation</title>
+	<text>Au détour d'un sentier, vous croisez l'une de vos connaissances. <span class="effPlayer">Serrez la main d'un·e joueur·se de votre choix.</span> La personne en question <span class="effPlayer">ne peut refuser votre poignée de main</span>, sauf s'il est dans l'incapacité physique de la serrer.</text>
+	<tags>
+	</tags>
+  </square> 
+
+  <square>
+	<num>12</num>
+    <title>Antidote</title>
+	<text></text>
+	<tags>
+	</tags>
+  </square> 
  
 </squares>

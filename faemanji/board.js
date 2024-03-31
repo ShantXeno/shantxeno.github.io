@@ -173,11 +173,12 @@ function hideCommonImmunities() {
 	
 	excludeList = params.get("exclude").split(",");
 	
-	
-	for (i = 0; i < excludeList.length; i++) {
-	
-		document.getElementById(excludeList[i]).parentElement.style.display = "none";
-	
+	if (excludeList != ""){
+		for (i = 0; i < excludeList.length; i++) {
+		
+			document.getElementById(excludeList[i]).parentElement.style.display = "none";
+		
+		}
 	}
 	
 }
